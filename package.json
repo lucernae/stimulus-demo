@@ -5,11 +5,16 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
     "babel": "^6.23.0",
+    "babel-loader": "^8.0.6",
     "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.2",
     "stimulus": "^1.1.1",
     "webpack": "^4.41.5",
     "webpack-dev-middleware": "^3.7.2"

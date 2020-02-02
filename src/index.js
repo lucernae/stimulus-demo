@@ -1,4 +1,4 @@
-// src/application.js
+// src/index.js
 import { Application } from "stimulus"
 import { definitionsFromContext } from "stimulus/webpack-helpers"
 
