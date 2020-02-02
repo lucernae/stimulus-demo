@@ -1,0 +1,27 @@
+{{#earthquake}}
+<tr data-controller="earthquake"
+    data-earthquake-time="{{time}}"
+    data-earthquake-shake_id="{{shake_id}}"
+    data-earthquake-magnitude="{{magnitude}}"
+    data-earthquake-depth="{{depth}}"
+    data-earthquake-location_description="{{location_description}}"
+    data-earthquake-source_type="{{source_type}}"
+    data-action="click->earthquake#detail"
+    style="cursor:pointer">
+    <td>
+        {{time}}
+    </td>
+    <td>
+        {{location_description}}
+    </td>
+    <td>
+        {{magnitude}}
+    </td>
+    <td>
+        {{depth}}
+    </td>
+    <td>
+        {{shake_id}}
+    </td>
+</tr>
+{{/earthquake}}

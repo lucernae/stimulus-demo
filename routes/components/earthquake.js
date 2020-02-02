@@ -10,7 +10,10 @@ router.get('/', (req, res) => {
             return response.json()
         })
         .then((response) => {
-            res.send(response)
+            let contexts = {
+                earthquake: response['results']
+            }
+            res.render('components/earthquake/entry', contexts)
         })
 })
 

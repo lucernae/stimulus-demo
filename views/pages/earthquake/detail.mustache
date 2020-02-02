@@ -1,0 +1,71 @@
+{{> partials/header }}
+<div data-controller="earthquake"
+    data-earthquake-time="{{time}}"
+    data-earthquake-shake_id="{{shake_id}}"
+    data-earthquake-magnitude="{{magnitude}}"
+    data-earthquake-depth="{{depth}}"
+    data-earthquake-location_description="{{location_description}}"
+    data-earthquake-source_type="{{source_type}}"
+    data-earthquake-state="initial" class="panel">
+    <div>
+        <h1>Earthquake data</h1>
+    </div>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        Property
+                    </th>
+                    <th>
+                        Value
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>
+                    Shake ID
+                    </th>
+                    <td>
+                    {{shake_id}}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                    Time
+                    </th>
+                    <td>
+                    {{time}}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                    Location
+                    </th>
+                    <td>
+                    {{location_description}}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                    Magnitude
+                    </th>
+                    <td>
+                    {{magnitude}}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                    Depth
+                    </th>
+                    <td>
+                    {{depth}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{{> partials/footer }}

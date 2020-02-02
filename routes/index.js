@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
 
-const earthquake = require('./earthquake')
+const earthquakePages = require('./pages/earthquake')
+const earthquakeComponents = require('./components/earthquake')
 
-/* GET home page. */
-router.use('/earthquake', earthquake)
+router.use('/pages/earthquake', earthquakePages)
+router.use('/components/earthquake', earthquakeComponents)
 
 
 module.exports = router
