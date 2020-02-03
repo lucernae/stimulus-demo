@@ -10,11 +10,17 @@ export default class extends Controller {
         "location_descriptions",
         "depth",
         "source_type",
+        "location_geojson",
+        "mmi_geojson"
     ]
 
     detail(){
         let shake_id = this.data.get('shake_id')
         let source_type = this.data.get('source_type')
         Turbolinks.visit(`/app/pages/earthquake/detail/${shake_id}/${source_type}`)
+    }
+
+    back(){
+        history.back()
     }
 }

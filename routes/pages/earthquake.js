@@ -1,5 +1,4 @@
 const express = require("express")
-const app = express()
 const router = express.Router()
 const fetch = require('node-fetch')
 
@@ -13,8 +12,10 @@ router.get('/detail/:shake_id/:source_type', (req, res) => {
         .then((response) => {
             return response.json()
         })
-        .then((response) => {
-            res.render('pages/earthquake/detail', response)
+        .then((json) => {
+            json['location_geojson'] = `/app/components/earthquake/location/${json.shake_id}/${json.source_type}`
+            json['mmi_geojson'] = `/app/components/earthquake/mmi/${json.shake_id}/${json.source_type}`
+            res.render('pages/earthquake/detail', json)
         })
 })
 

@@ -6,65 +6,17 @@
     data-earthquake-depth="{{depth}}"
     data-earthquake-location_description="{{location_description}}"
     data-earthquake-source_type="{{source_type}}"
+    data-earthquake-location_geojson="{{location_geojson}}"
+    data-earthquake-mmi_geojson="{{mmi_geojson}}"
     data-earthquake-state="initial" class="panel">
     <div>
-        <h1>Earthquake data</h1>
+        <button type="button" class="btn btn-secondary" data-action="earthquake#back"><</button><h1>Earthquake data</h1>
     </div>
     <div>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>
-                        Property
-                    </th>
-                    <th>
-                        Value
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>
-                    Shake ID
-                    </th>
-                    <td>
-                    {{shake_id}}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                    Time
-                    </th>
-                    <td>
-                    {{time}}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                    Location
-                    </th>
-                    <td>
-                    {{location_description}}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                    Magnitude
-                    </th>
-                    <td>
-                    {{magnitude}}
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                    Depth
-                    </th>
-                    <td>
-                    {{depth}}
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        {{> components/earthquake/map }}
+    </div>
+    <div>
+        {{> components/earthquake/info }}
     </div>
 </div>
 
